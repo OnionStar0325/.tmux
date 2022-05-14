@@ -373,6 +373,12 @@ tmux_conf_update_plugins_on_reload=true
 #   - false
 tmux_conf_uninstall_plugins_on_reload=true
 
+set-window-option -g mode-keys vi # set copy mode for vi
+
+bind -n M-h previous-window # select previous window
+bind -n M-l next-window     # select next window
+bind -n M-d detach-client   # detach tmux client
+
 # /!\ the tpm bindings differ slightly from upstream:
 #   - installing plugins: <prefix> + I
 #   - uninstalling plugins: <prefix> + Alt + u
